@@ -1,0 +1,199 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  background: #0f0f0f;
+}
+
+.nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+}
+.nav a:hover{
+  color: yellow;
+}
+
+/* HERO */
+.hero-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  font-size: 4rem;
+}
+
+/* TEXT */
+.h {
+  max-width: 500px;
+}
+
+.hero-modern h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.hero-modern p {
+  color: #aaa;
+  margin: 10px 0;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: aliceblue;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 4rem;
+}
+
+/* IMAGE */
+.im {
+  height: 600px;
+  width: 800px;
+  border-radius: 10px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 40px;
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* BUTTON CARD */
+.card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: orange;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+input[type="text"] {
+  width: 800px;             /* طول مناسب */
+  padding: 10px 15px;       /* مسافة داخلية مريحة */
+  border: 2px solid #ccc;   /* حد خفيف */
+  border-radius: 25px;      /* شكل دائري أنيق */
+  font-size: 3rem;
+  outline: none;
+  transition: all 0.3s ease; /* حركة سلسة عند التركيز */
+  margin: 20px auto;        /* مسافة من الأعلى والأسفل */
+           /* يكون في منتصف الصفحة */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* ظل خفيف */
+}
+
+input[type="text"]:focus {
+  border-color: #ff6600;          /* تغيير لون الحد عند التركيز */
+  box-shadow: 0 4px 10px rgba(255,102,0,0.3); /* ظل برتقالي جميل */
+  background-color: #fffbe6;      /* لون خلفية خفيف عند التركيز */
+}
+.omar{
+  
+  font-size: 3rem;
+  margin-right: 10rem;
+  
+}
+#contact {
+  margin-top: 80px;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow effect */
+#contact::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,140,0,0.2), transparent 70%);
+  top: -50%;
+  left: -50%;
+  animation: glowMove 6s linear infinite;
+}
+
+@keyframes glowMove {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Title */
+.T {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Button */
+.cbtn {
+  padding: 14px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8c00, #ff5e00);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(255,140,0,0.4);
+}
+
+/* Hover */
+.cbtn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255,140,0,0.7);
+}
+
+/* Click effect */
+.cbtn:active {
+  transform: scale(0.95);
+}
+

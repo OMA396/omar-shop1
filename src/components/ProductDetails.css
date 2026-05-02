@@ -1,0 +1,84 @@
+.product-details {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background-color: #ece4e4e3;
+  border-radius: 15px;
+  margin: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #f29f07;
+  font-size: 1.5rem;
+  
+  height: 800px;
+}
+    
+.product-img {
+  width: 600px;
+  height: 600px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.details-info {
+  max-width: 600px;
+}
+
+.details-info h1 {
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 24px;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.description {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.details-info .btn {
+  padding: 12px 25px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.details-info .btn:hover {
+  background-color: #e65c00;
+}
+/* زرار الخروج أعلى يمين */
+.btn-exit-top {
+  position: absolute;       /* يخلي الزرار فوق الكارت */
+  top: 15px;                /* مسافة من أعلى الكارت */
+  right: 15px;              /* مسافة من يمين الكارت */
+  background: #ff0000;      /* لون أحمر كامل */
+  color: white;             /* اللون الأبيض للعلامة */
+  border: none;
+  border-radius:20%;       /* شكل دائري */
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;              /* يظهر فوق كل العناصر */
+  transition: background-color 0.2s;
+  font-size: 3rem;
+  width:150px;
+}
+
+.btn-exit-top:hover {
+  background-color: #cc0000; /* أحمر غامق عند المرور */
+
+}
+
+/* تأكد من أن الحاوية relative */
+.product-details {
+  position: relative;
+}

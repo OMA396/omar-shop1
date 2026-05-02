@@ -1,0 +1,75 @@
+/* الكونتينر الأساسي */
+.cart {
+  padding: 30px;
+  background: #0f0f0f;
+  min-height: 100vh;
+  color: white;
+}
+
+/* عنوان الصفحة */
+.cart h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* كل عنصر في السلة */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.cart-item:hover {
+  background: #222;
+}
+
+/* صورة المنتج */
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* معلومات المنتج */
+.cart-info {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.cart-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-price {
+  color: #00ff99;
+  margin-top: 5px;
+}
+
+/* زرار الحذف */
+.remove-btn {
+  background: crimson;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.remove-btn:hover {
+  background: red;
+}
+
+/* التوتال */
+.cart-total {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}

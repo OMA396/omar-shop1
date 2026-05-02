@@ -1,0 +1,184 @@
+/* ====== Container كامل ====== */
+.admin-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #181818; /* أغمق شوي للـ Dark Mode */
+  color: #f5f5f5;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ====== عنوان الادمن ====== */
+.admin-container h1 {
+  margin-bottom: 30px;
+  color: #ff9900; /* برتقالي جذاب */
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ====== زرار العودة ====== */
+.admin-container button.back-btn {
+  background-color: #ff4b4b;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.admin-container button.back-btn:hover {
+  background-color: #ff1f1f;
+}
+
+/* ====== الفورم ====== */
+.admin-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 900px;
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.admin-form input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 180px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+}
+
+.admin-form input:focus {
+  box-shadow: 0 0 0 2px #ff9900;
+}
+
+/* زرار إضافة أو تحديث */
+.admin-form button[type="submit"] {
+  background-color: #ff9900;
+  color: #181818;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.admin-form button[type="submit"]:hover {
+  background-color: #e07b00;
+  transform: scale(1.05);
+}
+
+/* ====== Grid المنتجات ====== */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* ====== كل كارت منتج ====== */
+.card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #292929;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+/* صورة المنتج */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* جسم الكارت */
+.card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffb84d;
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4b4b;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #cccccc;
+  flex-grow: 1;
+}
+
+/* ====== أزرار الكارت ====== */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-buttons button.edit-btn {
+  background-color: #ff9900;
+  color: #181818;
+}
+
+.card-buttons button.edit-btn:hover {
+  background-color: #e07b00;
+  transform: scale(1.05);
+}
+
+.card-buttons button.delete-btn {
+  background-color: #ff4b4b;
+  color: #fff;
+}
+
+.card-buttons button.delete-btn:hover {
+  background-color: #ff1f1f;
+  transform: scale(1.05);
+}
