@@ -80,8 +80,7 @@ export default function App() {
             <p>Minimal. Clean. Powerful.</p>
             <button className="btn">Shop Now</button>
           </div>
-
-          <img src={img} className="im" />
+<img src={img} className="im" alt="hero image" />
         </section>
 
         <Routes>
