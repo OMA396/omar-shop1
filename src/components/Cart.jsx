@@ -9,7 +9,7 @@ export default function Cart({ cart, removeFromCart }) {
 
       {cart.map((item, index) => (
         <div className="cart-item" key={index}>
-          <img src={item.image} />ِ
+<img src={item.image} alt={item.title} />
 
           <div className="cart-info">
             <div className="cart-title">{item.title}</div>
