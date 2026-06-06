@@ -27,19 +27,37 @@ export default function App() {
   }
 
   // ✅ تحميل المنتجات (API + الأدمن)
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(res => res.json())
-      .then(data => {
-        const localProducts = JSON.parse(localStorage.getItem("products")) || [];
-        setProducts([...data, ...localProducts]);
-      });
+useEffect(() => {
+  fetch("https://api.escuelajs.co/api/v1/products")
+    .then(res => res.json())
+    .then(data => {
 
-    const savedCart = localStorage.getItem("cart");
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
-    }
-  }, []);
+      const clothesOnly = data.filter(
+        item =>
+          item.category?.name?.toLowerCase().includes("clothes") ||
+          item.category?.name?.toLowerCase().includes("shirt") ||
+          item.category?.name?.toLowerCase().includes("fashion")
+      );
+
+      const formattedProducts = clothesOnly.map(item => ({
+        id: item.id,
+        title: item.title,
+        price: item.price,
+        image: item.images?.[0] || "",
+        description: item.description
+      }));
+
+      const localProducts =
+        JSON.parse(localStorage.getItem("products")) || [];
+
+      setProducts([...formattedProducts, ...localProducts]);
+    });
+
+  const savedCart = localStorage.getItem("cart");
+  if (savedCart) {
+    setCart(JSON.parse(savedCart));
+  }
+}, []);
 
   // ✅ حفظ منتجات الأدمن فقط
   useEffect(() => {
