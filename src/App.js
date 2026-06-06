@@ -28,12 +28,16 @@ export default function App() {
 
   // ✅ تحميل المنتجات (API + الأدمن)
 useEffect(() => {
-fetch("https://dummyjson.com/products")
-  .then(res => res.json())
-  .then(data => {
-    const localProducts = JSON.parse(localStorage.getItem("products")) || [];
-    setProducts([...data.products, ...localProducts]);
-  });
+  fetch("https://api.escuelajs.co/api/v1/products")
+    .then(res => res.json())
+    .then(data => {
+
+      const clothesOnly = data.filter(
+        item =>
+          item.category?.name?.toLowerCase().includes("clothes") ||
+          item.category?.name?.toLowerCase().includes("shirt") ||
+          item.category?.name?.toLowerCase().includes("fashion")
+      );
 
       const formattedProducts = clothesOnly.map(item => ({
         id: item.id,
